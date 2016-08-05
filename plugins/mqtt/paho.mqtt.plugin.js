@@ -37,7 +37,7 @@ var pahoClient;
 			 "display_name": "Use SSL",
 			 "type"        : "boolean",
 			 "description" : "Use SSL/TLS to connect to the MQTT Server",
-			 "default_value": false
+			 "default_value": true
 		 },
 		 {
 			 "name"        : "client_id",
@@ -142,7 +142,7 @@ var pahoClient;
 		 pahoClient = {};
 	 }
 
-	 currentSettings.server=window.location.hostname;
+	 //currentSettings.server=window.location.hostname;
 	 currentSettings.server="mchp-masters.ddns.net";
 	 pahoClient = new Paho.MQTT.Client(currentSettings.server,
 			 currentSettings.port, 
