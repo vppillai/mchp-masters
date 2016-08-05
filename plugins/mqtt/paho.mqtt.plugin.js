@@ -125,7 +125,7 @@ var pahoClient;
 							userName: currentSettings.username,
 							password: currentSettings.password,
 							useSSL: currentSettings.use_ssl,
-							hosts:"ws://mchp-masters.ddns.net:443/mqtt"});
+							hosts:["ws://mchp-masters.ddns.net:443/mqtt"]});
 		}
 
 		// **updateNow()** (required) : A public function we must implement that will be called when the user wants to manually refresh the datasource
@@ -155,6 +155,6 @@ var pahoClient;
 						userName: currentSettings.username,
 						password: currentSettings.password,
 						useSSL: currentSettings.use_ssl,
-						hosts:"ws://mchp-masters.ddns.net:443/mqtt"});
+						hosts:["ws://mchp-masters.ddns.net:443/mqtt"]});
 	}
 }());
