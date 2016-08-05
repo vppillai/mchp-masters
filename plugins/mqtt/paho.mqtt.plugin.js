@@ -124,8 +124,7 @@ var pahoClient;
 			pahoClient.connect({onSuccess:onConnect,
 							userName: currentSettings.username,
 							password: currentSettings.password,
-							useSSL: currentSettings.use_ssl,
-							hosts:["ws://mchp-masters.ddns.net:443/mqtt"]});
+							useSSL: currentSettings.use_ssl});
 		}
 
 		// **updateNow()** (required) : A public function we must implement that will be called when the user wants to manually refresh the datasource
@@ -144,7 +143,7 @@ var pahoClient;
 		}
 
     //currentSettings.server=window.location.hostname;
-    currentSettings.server="mchp-masters.ddns.net";
+    currentSettings.server="ws://mchp-masters.ddns.net:443/mqtt";
 		pahoClient = new Paho.MQTT.Client(currentSettings.server,
 										currentSettings.port, 
 										currentSettings.client_id);
@@ -154,7 +153,6 @@ var pahoClient;
 						
 						userName: currentSettings.username,
 						password: currentSettings.password,
-						useSSL: currentSettings.use_ssl,
-						hosts:["ws://mchp-masters.ddns.net:443/mqtt"]});
+						useSSL: currentSettings.use_ssl]});
 	}
 }());
