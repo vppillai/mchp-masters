@@ -19,7 +19,8 @@ var pahoClient;
 				"name"         : "server",
 				"display_name" : "MQTT Server",
 				"type"         : "text",
-        "default_value": window.location.hostname,
+			//        "default_value": window.location.hostname,
+			        "default_value": "mchp-masters.ddns.net",
 				"description"  : "Hostname for your MQTT Server",
                 "required" : true
 			},
