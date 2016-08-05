@@ -19,7 +19,7 @@ var pahoClient;
 				"name"         : "server",
 				"display_name" : "MQTT Server",
 				"type"         : "text",
-			//        "default_value": window.location.hostname,
+			       // "default_value": window.location.hostname,
 			        "default_value": "mchp-masters.ddns.net",
 				"description"  : "Hostname for your MQTT Server",
                 "required" : true
@@ -142,8 +142,8 @@ var pahoClient;
 			pahoClient = {};
 		}
 
-    //currentSettings.server=window.location.hostname;
-    currentSettings.server="ws://mchp-masters.ddns.net:443/mqtt";
+    currentSettings.server=window.location.hostname;
+    currentSettings.server="mchp-masters.ddns.net";
 		pahoClient = new Paho.MQTT.Client(currentSettings.server,
 										currentSettings.port, 
 										currentSettings.client_id);
@@ -153,6 +153,6 @@ var pahoClient;
 						
 						userName: currentSettings.username,
 						password: currentSettings.password,
-						useSSL: currentSettings.use_ssl]});
+						useSSL: currentSettings.use_ssl});
 	}
 }());
