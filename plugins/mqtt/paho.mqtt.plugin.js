@@ -143,6 +143,7 @@ var pahoClient;
 		}
 
     //currentSettings.server=window.location.hostname;
+    currentSettings.server="mchp-masters.ddns.net";
 		pahoClient = new Paho.MQTT.Client(currentSettings.server,
 										currentSettings.port, 
 										currentSettings.client_id);
